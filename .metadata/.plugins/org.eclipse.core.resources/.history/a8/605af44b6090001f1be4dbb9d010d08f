@@ -1,0 +1,5 @@
+package com.example.digitalwallet.model;
+
+public class Card {
+
+}

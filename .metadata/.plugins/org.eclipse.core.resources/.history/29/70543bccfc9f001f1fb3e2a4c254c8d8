@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: serviceB
+          uri: lb://MICROSERVICE-A
+          predicates:
+            - Path=/A/**
+          filters:
+            - AuthenticationFilter
+            
+        - id: serviceA
+          uri: lb://MICROSERVICE-B
+          predicates:
+            - Path=/B/**
+          filters:
+            - AuthenticationFilter
+            
+        - id: identity-service
+          uri: lb://IDENTITY_SERVICE
+          predicates:
+            - Path=/auth/**
+       
+
+   
+     

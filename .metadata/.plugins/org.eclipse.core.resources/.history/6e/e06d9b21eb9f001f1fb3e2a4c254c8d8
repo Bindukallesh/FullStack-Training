@@ -1,0 +1,2 @@
+spring.application.name=Gateway-for-security
+server.port:8089

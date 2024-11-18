@@ -1,0 +1,2 @@
+spring.application.name=Identity_service
+server.port=8092

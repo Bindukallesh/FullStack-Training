@@ -1,0 +1,2 @@
+spring.application.name=Microservice-B
+server.port=8090

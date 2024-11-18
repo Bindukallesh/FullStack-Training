@@ -1,0 +1,31 @@
+package com.example.digitalwallet.model;
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class FamilyMember {
+@Id
+private Long id;
+private String name;
+private String relation;
+private int age;
+@ElementCollection
+private List<GovtId> govtIds = new ArrayList<>();
+@ElementCollection
+private List<Insurance> insurances = new ArrayList<>();
+
+
+}

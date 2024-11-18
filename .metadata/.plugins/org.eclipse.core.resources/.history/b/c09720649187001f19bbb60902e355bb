@@ -1,0 +1,13 @@
+package com.example.springsecurity.controller;
+
+@RestController
+@RequestMapping("/register")
+public class RegistrationController {
+	@Autowired
+	UserRepository repository;
+
+	@PostMappin("add")
+	pubic MysUser newUser(@RequestBody MyUser user) {
+		return repository.save(user);
+	}
+}

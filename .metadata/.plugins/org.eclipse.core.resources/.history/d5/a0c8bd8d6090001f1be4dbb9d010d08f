@@ -1,0 +1,22 @@
+package com.example.digitalwallet.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Embeddable;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@Embeddable
+public class BankAccount {
+private String AccNumber;
+private String IFSCcode;
+private String bankName;
+@ElementCollection
+private List<Card> cards = new ArrayList<>();
+
+
+}
